@@ -1,0 +1,32 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Typography */
+
+h1{
+    font-size: 2.7rem;
+    font-weight: 400;
+}
+
+p{
+    font-size: 1.8rem;
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+
+    h1{
+        font-size: 4.2rem;
+    }
+    
+    p{
+        font-size: 1.3rem;
+    }
+    
+}
