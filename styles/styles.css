@@ -9,8 +9,17 @@ html{
 
 /* Typography */
 
+h1,h2{
+    margin: 0;
+}
+
 h1{
     font-size: 2.7rem;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 2.5rem;
     font-weight: 400;
 }
 
@@ -24,9 +33,122 @@ p{
     h1{
         font-size: 4.2rem;
     }
+
+    h2{
+        font-size: 3.2rem;
+    }
     
     p{
         font-size: 1.3rem;
     }
     
+}
+
+
+.site__header{
+    color: white;
+    background: black;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+.site__header h1{
+    margin: 0;
+    text-align: center;
+}
+
+.site__header--skewed{
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+/* LINKS */
+a{
+    text-decoration: none;
+}
+
+.link-arrow{
+    font-size: 1.8rem;
+}
+
+.link-arrow::after{
+    font-weight: bold;
+    content: '\279C';
+    margin-left: 5px;
+    transition: margin 0.2s;
+}
+
+.link-arrow:hover::after{
+    margin-left: 10px;
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+
+    .link-arrow{
+        font-size: 1.3rem;
+    }
+    
+}
+
+/* CARD */
+
+.block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    max-width: 1024px;
+}
+
+.card{
+    width: 100;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 20px
+}
+
+.card__image{
+    flex: 1 0 auto;
+    margin-bottom: 10px;
+}
+
+.card__image img{
+    height: auto;
+    width: 100%;
+}
+
+.card__text{
+    flex: 1;
+}
+
+.card__text .icon{
+    height: auto;
+    width: 10px;
+}
+
+.card__text .icon:hover{
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .card{
+        flex-direction: row;
+        flex-shrink: 1;
+    }
+
+    .card:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    .card__image{
+        max-width: 412px;
+        padding: 10px;
+    }
+
+    .card__text{
+        padding: 10px;
+    }
+
 }
