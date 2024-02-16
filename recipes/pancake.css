@@ -1,0 +1,30 @@
+ul{
+    list-style: none;
+}
+
+.list{
+    margin: 0;
+    padding-left: 10px;
+}
+
+.ingredients{
+    position: relative;
+}
+
+.ingredients__item{
+    margin-left: 30px;
+}
+
+.ingredients__item::before{
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #dedaca;
+        border-radius: 50%;
+        content: "";
+        height: 10px;
+        width: 10px;
+    
+}
